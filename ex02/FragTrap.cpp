@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yugao <yugao@student.42madrid.com>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/13 20:22:33 by yugao             #+#    #+#             */
+/*   Updated: 2024/05/13 20:25:58 by yugao            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "FragTrap.hpp"
 
 FragTrap::FragTrap(void){
@@ -13,9 +25,8 @@ FragTrap::FragTrap(std::string name): ClapTrap(name){
 	std::cout << "[FragTrap] Constructor(string) Called!\n";
 }
 
-FragTrap::FragTrap(const FragTrap &obj){
+FragTrap::FragTrap(const FragTrap &obj): ClapTrap(obj.get_name()){
 
-	this->change_name(obj.get_name());
 	this->change_hit(obj.get_hit());
 	this->change_energy(obj.get_energy());
 	this->change_damage(obj.get_damage());

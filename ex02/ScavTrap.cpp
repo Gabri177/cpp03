@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yugao <yugao@student.42madrid.com>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/13 20:22:43 by yugao             #+#    #+#             */
+/*   Updated: 2024/05/13 20:25:34 by yugao            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(void): ClapTrap ("NameUnKnow"){
@@ -21,7 +33,7 @@ ScavTrap::~ScavTrap(void){
 	std::cout << "Child Destructor called!\n";
 }
 
-ScavTrap::ScavTrap(const ScavTrap& obj){
+ScavTrap::ScavTrap(const ScavTrap& obj): ClapTrap(obj.get_name()){
 
 	std::cout << "Child copy constructor called\n";
 	this->change_name(obj.get_name());

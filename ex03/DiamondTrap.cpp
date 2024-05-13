@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yugao <yugao@student.42madrid.com>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/13 20:22:54 by yugao             #+#    #+#             */
+/*   Updated: 2024/05/13 20:27:46 by yugao            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "DiamondTrap.hpp"
 
 DiamondTrap::DiamondTrap(void){
@@ -14,9 +26,8 @@ DiamondTrap::DiamondTrap(std::string name){
 	FragTrap::change_damage (30);
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &obj): FragTrap(obj), ScavTrap(obj) {
+DiamondTrap::DiamondTrap(const DiamondTrap &obj): ClapTrap(obj.get_name()), FragTrap(obj), ScavTrap(obj) {
 
-    this->_name = obj._name;
 }
 
 DiamondTrap::~DiamondTrap(void){
